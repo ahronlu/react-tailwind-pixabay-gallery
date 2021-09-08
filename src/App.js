@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import ImageCard from './components/ImageCard';
-import ImageSearch from './components/ImageSearch';
+import { useState, useEffect } from "react";
+import ImageCard from "./components/ImageCard";
+import ImageSearch from "./components/ImageSearch";
 
-function App() {
+export default function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [term, setTerm] = useState('');
+  const [term, setTerm] = useState("");
 
   useEffect(() => {
     fetch(
@@ -39,5 +39,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

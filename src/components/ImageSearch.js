@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 
-const ImageSearch = ({ searchText }) => {
-  const [text, setText] = useState('');
+export default function ImageSearch({ searchText }) {
+  const [text, setText] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
-
     searchText(text);
   };
 
@@ -29,6 +28,4 @@ const ImageSearch = ({ searchText }) => {
       </form>
     </div>
   );
-};
-
-export default ImageSearch;
+}
